@@ -4,7 +4,7 @@ Welcome to my personal portfolio website!
 This portfolio showcases my **skills, projects, certifications, education**, and provides an easy way to contact me.
 
 🚀 Live Portfolio:  
-👉 https://demon-sunny.github.io/Portfolio/
+👉 https://shanmukhraj2997.github.io/Portfolio/
 
 ---
 
