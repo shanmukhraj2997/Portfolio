@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAMIDI SHANMUKH RAJ | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 text-slate-800 dark:text-slate-100">
+
+    <div class="flex">
+        <aside
+            class="w-72 flex-shrink-0 min-w-[18rem] shadow-2xl p-8 hidden md:block sticky-sidebar glass-sidebar transition-all duration-500">
+            <div class="mb-10 text-center">
+                <h3 class="text-2xl font-black tracking-tight text-blue-600 dark:text-blue-400">PORTFOLIO</h3>
+                <div class="w-10 h-1 bg-blue-600 mx-auto mt-2 rounded-full"></div>
+            </div>
+            <nav id="sidebar-nav" class="space-y-3">
+                <a href="#about" data-section-id="about"
+                    class="flex items-center gap-3 py-3 px-5 text-sm font-semibold rounded-xl text-slate-600 dark:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all duration-300">
+                    <span
+                        class="w-8 h-8 flex items-center justify-center rounded-lg bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400"><i
+                            class="fa-solid fa-user"></i></span>
+                    About Me
+                </a>
+                <a href="#skills" data-section-id="skills"
+                    class="flex items-center gap-3 py-3 px-5 text-sm font-semibold rounded-xl text-slate-600 dark:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all duration-300">
+                    <span
+                        class="w-8 h-8 flex items-center justify-center rounded-lg bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400"><i
+                            class="fa-solid fa-code"></i></span>
+                    Skills
+                </a>
+                <a href="#projects" data-section-id="projects"
+                    class="flex items-center gap-3 py-3 px-5 text-sm font-semibold rounded-xl text-slate-600 dark:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all duration-300">
+                    <span
+                        class="w-8 h-8 flex items-center justify-center rounded-lg bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400"><i
+                            class="fa-solid fa-project-diagram"></i></span>
+                    Projects
+                </a>
+                <a href="#training" data-section-id="training"
+                    class="flex items-center gap-3 py-3 px-5 text-sm font-semibold rounded-xl text-slate-600 dark:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all duration-300">
+                    <span
+                        class="w-8 h-8 flex items-center justify-center rounded-lg bg-purple-50 dark:bg-slate-800 text-purple-600 dark:text-purple-400"><i
+                            class="fa-solid fa-flask"></i></span>
+                    Training
+                </a>
+                <a href="#certs" data-section-id="certs"
+                    class="flex items-center gap-3 py-3 px-5 text-sm font-semibold rounded-xl text-slate-600 dark:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all duration-300">
+                    <span
+                        class="w-8 h-8 flex items-center justify-center rounded-lg bg-amber-50 dark:bg-slate-800 text-amber-600 dark:text-amber-400"><i
+                            class="fa-solid fa-certificate"></i></span>
+                    Certifications
+                </a>
+                <a href="#education" data-section-id="education"
+                    class="flex items-center gap-3 py-3 px-5 text-sm font-semibold rounded-xl text-slate-600 dark:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all duration-300">
+                    <span
+                        class="w-8 h-8 flex items-center justify-center rounded-lg bg-rose-50 dark:bg-slate-800 text-rose-600 dark:text-rose-400"><i
+                            class="fa-solid fa-graduation-cap"></i></span>
+                    Education
+                </a>
+                <a href="#contact" data-section-id="contact"
+                    class="flex items-center gap-3 py-3 px-5 text-sm font-semibold rounded-xl text-slate-600 dark:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all duration-300">
+                    <span
+                        class="w-8 h-8 flex items-center justify-center rounded-lg bg-cyan-50 dark:bg-slate-800 text-cyan-600 dark:text-cyan-400"><i
+                            class="fa-solid fa-envelope"></i></span>
+                    Contact
+                </a>
+            </nav>
+        </aside>
+
+        <div class="flex-1 min-h-screen min-w-0 overflow-hidden"
+            style="background-color: var(--bg-main); color: var(--text-main);">
+            <header class="w-full shadow-lg sticky top-0 z-50 p-6 glass-card border-b border-white/20">
+                <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-6">
+                        <div class="relative group">
+                            <div
+                                class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                            </div>
+                            <img src="sunny.jpg" alt="Profile"
+                                class="relative w-24 h-24 rounded-full border-4 border-white dark:border-slate-800 shadow-2xl object-cover" />
+                        </div>
+                        <div class="space-y-1">
+                            <h1 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white">PAMIDI
+                                SHANMUKH RAJ</h1>
+                            <p
+                                class="text-base font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest text-xs">
+                                Computer Science & Engineering Student</p>
+                            <div class="flex items-center gap-4 pt-2">
+                                <a href="http://www.linkedin.com/in/pshanmukh-raj/" target="_blank" rel="noreferrer"
+                                    class="p-2 bg-blue-50 dark:bg-slate-800 rounded-lg text-blue-600 dark:text-blue-400 hover:scale-110 transition-transform"><i
+                                        class="fa-brands fa-linkedin text-xl"></i></a>
+                                <a href="https://github.com/shanmukhraj2997" target="_blank" rel="noreferrer"
+                                    class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-800 dark:text-white hover:scale-110 transition-transform"><i
+                                        class="fa-brands fa-github text-xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="theme-toggle"
+                        class="relative w-12 h-12 flex items-center justify-center glass-card rounded-2xl hover:scale-105 active:scale-95 transition-all duration-300">
+                        <span class="hidden dark:block text-2xl">☀️</span>
+                        <span class="dark:hidden text-2xl">🌙</span>
+                    </button>
+                </div>
+            </header>
+
+            <main class="w-full space-y-24 py-20 px-10 md:px-16 lg:px-24">
+
+                <section id="about" class="max-w-6xl mx-auto reveal">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-black text-slate-900 dark:text-white section-header">
+                            Summary
+                        </h2>
+                    </div>
+                    <div class="glass-card rounded-3xl p-10 md:p-16 relative overflow-hidden group">
+                        <div
+                            class="absolute -right-20 -top-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-700">
+                        </div>
+                        <p
+                            class="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed text-slate-600 dark:text-slate-200 text-center italic">
+                            "Computer Science student skilled in <span
+                                class="text-blue-600 dark:text-blue-400 font-bold">full-stack development</span>,
+                            <span class="text-indigo-600 dark:text-indigo-400 font-bold">authentication systems</span>,
+                            and <span class="text-emerald-600 dark:text-emerald-400 font-bold">automation</span>.
+                            Expertise in C/C++, Python, JavaScript, PHP, React, and Tailwind CSS.
+                            A passionate problem solver focused on building real-time platforms that enhance
+                            efficiency."
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="w-3/4 mx-auto border-gray-300 dark:border-gray-700" />
+
+                <section id="skills" class="max-w-6xl mx-auto reveal">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-black text-slate-900 dark:text-white section-header">
+                            Skills & Expertise
+                        </h2>
+                    </div>
+                    <div class="glass-card rounded-3xl p-10 md:p-16">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                            <div class="space-y-6">
+                                <h4
+                                    class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-500/10 text-blue-600"><i
+                                            class="fa-solid fa-code"></i></span>
+                                    Languages
+                                </h4>
+                                <div id="list-languages" class="space-y-6"></div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <h4
+                                    class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-600"><i
+                                            class="fa-solid fa-globe"></i></span>
+                                    Web Tech
+                                </h4>
+                                <div id="list-web-tech" class="space-y-6"></div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <h4
+                                    class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600"><i
+                                            class="fa-solid fa-layer-group"></i></span>
+                                    Frameworks
+                                </h4>
+                                <div id="list-frameworks" class="space-y-6"></div>
+                            </div>
+
+                            <div class="lg:col-span-3 pt-8 border-t border-slate-200 dark:border-slate-700/50">
+                                <h4
+                                    class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-amber-500/10 text-amber-600"><i
+                                            class="fa-solid fa-wrench"></i></span>
+                                    Tools & Platforms
+                                </h4>
+                                <div id="list-tools" class="flex flex-wrap gap-4"></div>
+                            </div>
+
+                            <div class="lg:col-span-3 pt-8 border-t border-slate-200 dark:border-slate-700/50">
+                                <h4
+                                    class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-rose-500/10 text-rose-600"><i
+                                            class="fa-solid fa-users-gear"></i></span>
+                                    Soft Skills
+                                </h4>
+                                <div id="list-soft-skills" class="flex flex-wrap gap-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="w-3/4 mx-auto border-gray-300 dark:border-gray-700" />
+
+                <section id="projects" class="max-w-6xl mx-auto reveal mb-20">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-black text-slate-900 dark:text-white section-header">
+                            Featured Projects
+                        </h2>
+                    </div>
+
+                    <div class="relative group/slider px-4 md:px-0">
+                        <!-- Navigation Arrows -->
+                        <button id="prev-project"
+                            class="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full glass-card flex items-center justify-center text-blue-600 dark:text-blue-400 transition-all duration-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 border border-blue-600/20 shadow-xl opacity-0 group-hover/slider:opacity-100 -ml-6">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+
+                        <div id="projects-slider"
+                            class="flex gap-8 overflow-x-auto scroll-smooth pb-10 snap-x snap-mandatory hide-scrollbar">
+                            <!-- Projects will be injected here -->
+                        </div>
+
+                        <button id="next-project"
+                            class="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full glass-card flex items-center justify-center text-blue-600 dark:text-blue-400 transition-all duration-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 border border-blue-600/20 shadow-xl opacity-0 group-hover/slider:opacity-100 -mr-6">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
+
+                <hr class="w-3/4 mx-auto border-gray-300 dark:border-gray-700" />
+
+                <section id="training" class="max-w-6xl mx-auto reveal">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-black text-slate-900 dark:text-white section-header">
+                            Training & Workshops
+                        </h2>
+                    </div>
+                    <div class="glass-card rounded-3xl p-10 md:p-16 space-y-8">
+                        <div
+                            class="group relative pl-8 before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-blue-600 before:rounded-full">
+                            <h3 class="text-2xl font-black text-slate-900 dark:text-white mb-2">
+                                CSE-Pathshala | Basic Python towards ML/AI
+                            </h3>
+                            <div class="flex items-center gap-4 mb-6">
+                                <button
+                                    data-cert-link="https://drive.google.com/file/d/1-gh-8kcc2O0feHAJT48YWZ4xSMHhkIqp/preview"
+                                    class="text-sm font-black uppercase tracking-widest text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors cert-button flex items-center gap-2">
+                                    <i class="fa-solid fa-certificate"></i> View Certificate
+                                </button>
+                            </div>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3 text-slate-600 dark:text-slate-300">
+                                    <i class="fa-solid fa-check-circle text-emerald-500 mt-1"></i>
+                                    <span>Acquired strong foundational proficiency in Python for ML/AI, including data
+                                        structures and functional programming.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-slate-600 dark:text-slate-300">
+                                    <i class="fa-solid fa-check-circle text-emerald-500 mt-1"></i>
+                                    <span>Executed hands-on exercises in Google Colab involving data set operations and
+                                        ML workflows.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="certs" class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl font-extrabold mb-10 text-center text-blue-600 border-b-2 pb-2">
+                        🏅 Certifications
+                    </h2>
+                    <div class="rounded-xl shadow-xl p-10 md:p-12 space-y-8" style="background-color: var(--bg-card);">
+                        <div class="border-l-4 border-blue-400 pl-4">
+                            <h3 class="text-xl font-semibold mb-4 text-blue-600">Certificates</h3>
+                            <div id="certs-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <!-- JS will inject -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="w-3/4 mx-auto border-gray-300 dark:border-gray-700" />
+
+                <section id="education" class="max-w-6xl mx-auto reveal">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-black text-slate-900 dark:text-white section-header">
+                            Education
+                        </h2>
+                    </div>
+                    <div class="glass-card rounded-3xl p-10 md:p-16">
+                        <div
+                            class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+                            <div
+                                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                <div
+                                    class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-slate-800 bg-blue-500 text-white shadow-xl md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div
+                                    class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl shadow-lg border border-white/20">
+                                    <div class="flex items-center justify-between space-x-2 mb-1">
+                                        <div class="font-bold text-slate-900 dark:text-white">Lovely Professional
+                                            University</div>
+                                        <time class="font-bold text-blue-600 dark:text-blue-400">2023 - Present</time>
+                                    </div>
+                                    <div class="text-slate-500 dark:text-slate-400 font-semibold mb-2">B.Tech CSE</div>
+                                    <div class="text-sm text-slate-600 dark:text-slate-300 font-bold">CGPA: 8.01</div>
+                                </div>
+                            </div>
+                            <div
+                                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                <div
+                                    class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-slate-800 bg-emerald-500 text-white shadow-xl md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                    <i class="fa-solid fa-school"></i>
+                                </div>
+                                <div
+                                    class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl shadow-lg border border-white/20">
+                                    <div class="flex items-center justify-between space-x-2 mb-1">
+                                        <div class="font-bold text-slate-900 dark:text-white">Narayana Junior College
+                                        </div>
+                                        <time class="font-bold text-emerald-600 dark:text-emerald-400">2021 -
+                                            2023</time>
+                                    </div>
+                                    <div class="text-slate-500 dark:text-slate-400 font-semibold mb-2">Intermediate
+                                    </div>
+                                    <div class="text-sm text-slate-600 dark:text-slate-300 font-bold">Percentage: 97.8%
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                <div
+                                    class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-slate-800 bg-purple-500 text-white shadow-xl md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                    <i class="fa-solid fa-book"></i>
+                                </div>
+                                <div
+                                    class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl shadow-lg border border-white/20">
+                                    <div class="flex items-center justify-between space-x-2 mb-1">
+                                        <div class="font-bold text-slate-900 dark:text-white">Loyola Public School</div>
+                                        <time class="font-bold text-purple-600 dark:text-purple-400">2013 - 2020</time>
+                                    </div>
+                                    <div class="text-slate-500 dark:text-slate-400 font-semibold mb-2">Matriculation
+                                    </div>
+                                    <div class="text-sm text-slate-600 dark:text-slate-300 font-bold">Percentage: 89.7%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="w-3/4 mx-auto border-gray-300 dark:border-gray-700" />
+
+                <section id="contact" class="max-w-4xl mx-auto pb-20 reveal">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-black text-slate-900 dark:text-white section-header">
+                            Get In Touch
+                        </h2>
+                    </div>
+
+                    <div class="glass-card rounded-[2rem] p-10 md:p-16 relative overflow-hidden">
+                        <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl">
+                        </div>
+
+                        <form action="mailto:shanmukhraj2997@gmail.com" method="POST" enctype="text/plain"
+                            class="space-y-8 relative z-10">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 ml-1">Your
+                                        Name</label>
+                                    <input type="text" name="name" placeholder="John Doe"
+                                        class="w-full glass-card border-none rounded-2xl p-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                                        required />
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 ml-1">Your
+                                        Email</label>
+                                    <input type="email" name="email" placeholder="john@example.com"
+                                        class="w-full glass-card border-none rounded-2xl p-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                                        required />
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label
+                                    class="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 ml-1">Message</label>
+                                <textarea name="message" placeholder="Tell me about your project..."
+                                    class="w-full glass-card border-none rounded-2xl p-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                                    rows="5" required></textarea>
+                            </div>
+
+                            <div class="text-center pt-4">
+                                <button type="submit"
+                                    class="group relative inline-flex items-center justify-center px-10 py-4 font-black text-white transition-all duration-200 bg-blue-600 rounded-2xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900">
+                                    <span class="mr-2">Send Message</span>
+                                    <i
+                                        class="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+            </main>
+
+            <div id="cert-modal" class="fixed inset-0 bg-black/70 flex justify-end z-50 backdrop-blur-sm hidden">
+                <div id="cert-panel"
+                    class="w-full md:w-3/5 lg:w-1/2 h-full shadow-2xl p-6 flex flex-col transform translate-x-full transition-transform duration-300 text-slate-900 dark:text-white"
+                    style="background-color: var(--bg-card);">
+                    <button id="close-modal-btn"
+                        class="self-end mb-4 text-red-500 font-semibold text-lg hover:text-red-700 transition">
+                        Close (X)
+                    </button>
+                    <h3
+                        class="text-2xl font-black mb-6 text-center text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-4">
+                        Certificate Preview</h3>
+                    <iframe id="cert-iframe" src="" title="Certificate Preview"
+                        class="w-full flex-1 border border-gray-300 dark:border-gray-600 rounded-lg"
+                        allow="fullscreen"></iframe>
+                </div>
+            </div>
+
+            <footer class="text-center p-12 text-sm border-t transition-colors duration-500"
+                style="background-color: var(--bg-sidebar); border-color: var(--glass-border);">
+                <div class="max-w-4xl mx-auto">
+                    <div class="mb-10 text-center">
+                        <h3 class="font-bold text-lg mb-4 text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+                            Contact Details</h3>
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-center gap-6 text-slate-600 dark:text-slate-300">
+                            <p class="flex items-center gap-2">
+                                <i class="fa-solid fa-envelope text-blue-500"></i>
+                                <a href="mailto:shanmukhraj2997@gmail.com"
+                                    class="hover:text-blue-600 transition-colors uppercase font-black tracking-tighter">shanmukhraj2997@gmail.com</a>
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="fa-solid fa-phone text-blue-500"></i>
+                                <span class="font-black tracking-tighter">+91 6302221249</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-8 border-t border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-500 font-bold uppercase tracking-widest text-[10px]">
+                        © 2025 PAMIDI SHANMUKH RAJ. <br class="md:hidden"> Built with HTML, Vanilla JS, and Tailwind
+                        CSS.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
