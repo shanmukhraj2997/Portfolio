@@ -9,6 +9,7 @@ import Education from './components/Education'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import shrineBg from './assets/shrine-bg2.jpg'
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       {/* Fixed Background Image with Dark Overlay */}
       <div 
         className="fixed inset-0 z-[-2] bg-cover bg-top bg-no-repeat"
-        style={{ backgroundImage: "url('/src/assets/shrine-bg2.jpg')" }}
+        style={{ backgroundImage: `url(${shrineBg})` }}
       >
         <div className="absolute inset-0 bg-[#06060c]/50"></div>
       </div>
