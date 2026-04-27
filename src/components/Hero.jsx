@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
-import { motion, useMotionValue, useTransform, useSpring, useMotionTemplate } from 'framer-motion'
-import { Download } from 'lucide-react'
+import { motion, AnimatePresence, useMotionValue, useTransform, useSpring, useMotionTemplate } from 'framer-motion'
+import { Download, Play, X } from 'lucide-react'
 import cvFile from "../assets/General-CV(Sunny')_1774079100.pdf"
 import heroImage from '../assets/hero-front-glasses.png'
 import sunnyImage from '../assets/sunny1.jpeg'
 
+const VIDEO_CV_URL = 'https://drive.google.com/file/d/1RE9rybYxCmR9X5g7h6UOTXmuIX-mCyCh/preview'
+
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false)
+  const [showVideoCV, setShowVideoCV] = useState(false)
 
   // 3D Parallax State
   const x = useMotionValue(0)
@@ -129,14 +132,68 @@ const Hero = () => {
           </a>
         </div>
         
-        <a 
-          href={cvFile} 
-          download="Shanmukh_CV.pdf"
-          className="ml-20 w-36 py-3 rounded-2xl border border-gray-500 text-gray-300 hover:bg-white hover:text-black transition-all font-bold text-[15px] text-center flex items-center justify-center gap-2 group/btn"
-        >
-          <Download size={16} className="group-hover/btn:-translate-y-1 transition-transform" /> CV
-        </a>
+        <div className="flex gap-4">
+          <a 
+            href={cvFile} 
+            download="Shanmukh_CV.pdf"
+            className="w-36 py-3 rounded-2xl border border-gray-500 text-gray-300 hover:bg-white hover:text-black transition-all font-bold text-[15px] text-center flex items-center justify-center gap-2 group/btn"
+          >
+            <Download size={16} className="group-hover/btn:-translate-y-1 transition-transform" /> CV
+          </a>
+          <button
+            onClick={() => setShowVideoCV(true)}
+            className="w-36 py-3 rounded-2xl border border-gray-500 text-gray-300 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:border-transparent hover:text-white transition-all font-bold text-[15px] text-center flex items-center justify-center gap-2 group/vbtn cursor-pointer"
+          >
+            <Play size={16} className="group-hover/vbtn:scale-125 transition-transform" /> Video CV
+          </button>
+        </div>
       </motion.div>
+
+      {/* Video CV Modal */}
+      <AnimatePresence>
+        {showVideoCV && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center"
+            onClick={() => setShowVideoCV(false)}
+          >
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-black/80 backdrop-blur-md" />
+
+            {/* Modal Content */}
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0, y: 30 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.85, opacity: 0, y: 30 }}
+              transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+              className="relative w-[90vw] max-w-4xl aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+              onClick={(e) => e.stopPropagation()}
+              style={{ boxShadow: '0 0 60px rgba(168, 85, 247, 0.25), 0 0 120px rgba(236, 72, 153, 0.1)' }}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setShowVideoCV(false)}
+                className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all cursor-pointer"
+              >
+                <X size={18} />
+              </button>
+
+              {/* Google Drive Embed */}
+              <iframe
+                src={VIDEO_CV_URL}
+                title="Shanmukh Video CV"
+                className="w-full h-full"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                style={{ border: 'none' }}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }

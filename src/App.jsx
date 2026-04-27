@@ -9,11 +9,15 @@ import Education from './components/Education'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import CustomCursor from './components/CustomCursor'
+// import DragonCursor from './components/DragonCursor'
 import shrineBg from './assets/shrine-bg2.jpg'
 
 function App() {
   return (
-    <div className="relative min-h-screen text-gray-200 selection:bg-white selection:text-black font-sans overflow-x-hidden">
+    <div className="relative min-h-screen text-gray-200 selection:bg-white selection:text-black font-sans overflow-x-hidden" style={{ cursor: 'none' }}>
+      <CustomCursor />
+      {/* <DragonCursor /> */}
       {/* Fixed Background Image with Dark Overlay */}
       <div 
         className="fixed inset-0 z-[-2] bg-cover bg-top bg-no-repeat"
